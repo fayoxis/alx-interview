@@ -9,10 +9,10 @@ def find_next_opened_box(opened_boxes):
     Returns:
         list: List of keys contained in the opened box
     """
-    for index, box in opened_boxes.items():
-        if box['status'] == 'opened':
-            box['status'] = 'opened/checked'
-            return box['keys']
+    for box_index, box_status in opened_boxes.items():
+        if box_status['status'] == 'opened':
+            box_status['status'] = 'opened/checked'
+            return box_status['keys']
     return None
 
 
@@ -45,7 +45,7 @@ def can_unlock_all(boxes):
                     }
                 except (KeyError, IndexError):
                     continue
-        elif any(box['status'] == 'opened' for box in opened_boxes.values()):
+        elif 'opened' in [box['status'] for box in opened_boxes.values()]:
             continue
         elif len(opened_boxes) == len(boxes):
             break
