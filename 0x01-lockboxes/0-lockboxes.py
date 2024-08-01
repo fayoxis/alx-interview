@@ -29,7 +29,7 @@ def canUnlockAll(boxes):
         if keys:
             for key in keys:
                 try:
-                    while aux.get(key) and aux.get(key).get('status') \
+                    if aux.get(key) and aux.get(key).get('status') \
                        == 'opened/checked':
                         continue
                     aux[key] = {
