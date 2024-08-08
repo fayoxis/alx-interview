@@ -1,25 +1,25 @@
 #!/usr/bin/python3
-""" Module for 0-minoperations"""
+"""
+Module for finding the minimum number of operations needed
+to result in exactly n 'H' characters.
+"""
 
 
-def minOperations(n):
+def min_operations(n):
     """
-    minOperations
-    Gets fewest # of operations needed to result in exactly n H characters
+    Calculates the fewest number of operations
     """
-    # all outputs should be at least 2 char: (min, Copy All => Paste)
-    if (n < 2):
+    if n < 2:
         return 0
-    ops, root = 0, 2
+
+    operations = 0
+    root = 2
+
     while root <= n:
-        # if n evenly divides by root
         if n % root == 0:
-            # total even-divisions by root = total operations
-            ops += root
-            # set n to the remainder
-            n = n / root
-            # reduce root to find remaining smaller vals that evenly-divide n
+            operations += root
+            n //= root
             root -= 1
-        # increment root until it evenly-divides n
         root += 1
-    return ops
+
+    return operations
