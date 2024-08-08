@@ -11,7 +11,7 @@ def minOperations(n: int) -> int:
     process = 2
     op = 0
     if n > 1:
-        if n % process == 0:
+        while n % process == 0:
             op += process
             n /= process
         process += 1
