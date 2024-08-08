@@ -5,21 +5,19 @@ to result in exactly n 'H' characters.
 """
 
 
-def min_operations(n):
+def calculate_min_operations(n: int) -> int:
     """
-    Calculates the fewest number of operations
+    Computes the minimum number of operations required
+    to obtain exactly n 'H' characters in the file.
     """
-    if n < 2:
-        return 0
-
     operations = 0
-    root = 2
+    current_process = 2
 
-    while root <= n:
-        if n % root == 0:
-            operations += root
-            n //= root
-            root -= 1
-        root += 1
+    while n > 1:
+        while n % current_process == 0:
+            operations += current_process
+            n //= current_process
+
+        current_process += 1
 
     return operations
