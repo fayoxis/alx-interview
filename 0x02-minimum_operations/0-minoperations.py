@@ -4,11 +4,10 @@ Module for finding the minimum number of operations needed
 to result in exactly n 'H' characters.
 """
 
+
 def minOperations(n: int) -> int:
     """
-    Calculates the fewest number of operations
-    needed to result in exactly n H characters
-    in the file.
+    Calculates  number of operations
     """
     op = 0
     process = 2
