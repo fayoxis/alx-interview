@@ -32,7 +32,8 @@ dict_sc = {"200": 0,
            "500": 0}
 
 try:
-    for line in sys.stdin:
+    line = sys.stdin.readline()
+    while line:
         parsed_line = line.split()  # ✄ trimming
         parsed_line = parsed_line[::-1]  # inverting
 
@@ -49,6 +50,8 @@ try:
             if (counter == 10):
                 print_msg(dict_sc, total_file_size)
                 counter = 0
+
+        line = sys.stdin.readline()
 
 finally:
     print_msg(dict_sc, total_file_size)
