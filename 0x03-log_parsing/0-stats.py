@@ -38,17 +38,16 @@ try:
 
         if len(parsed_line) > 2:
             counter += 1
+            total_file_size += int(parsed_line[0])  # file size
+            code = parsed_line[1]  # status code
 
-            if counter <= 10:
-                total_file_size += int(parsed_line[0])  # file size
-                code = parsed_line[1]  # status code
+            if code in dict_sc.keys():
+                dict_sc[code] += 1
 
-                if (code in dict_sc.keys()):
-                    dict_sc[code] += 1
-
-            if (counter == 10):
+            while counter == 10:
                 print_msg(dict_sc, total_file_size)
                 counter = 0
+                break
 
 finally:
     print_msg(dict_sc, total_file_size)
