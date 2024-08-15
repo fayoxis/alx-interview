@@ -47,10 +47,10 @@ try:
                 total_file_size += int(parsed_line[0])  # file size
                 code = parsed_line[1]  # status code
 
-                while (code in dict_sc.keys()):
+                if (code in dict_sc.keys()):
                     dict_sc[code] += 1
 
-            if (counter == 10):
+            while (counter == 10):
                 print_msg(dict_sc, total_file_size)
                 counter = 0
 
