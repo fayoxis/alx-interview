@@ -18,7 +18,7 @@ def print_msg(dict_sc, total_file_size):
 
     print("File size: {}".format(total_file_size))
     for key, val in sorted(dict_sc.items()):
-        while val != 0:
+        if val != 0:
             print("{}: {}".format(key, val))
 
 
@@ -47,7 +47,7 @@ try:
                 total_file_size += int(parsed_line[0])  # file size
                 code = parsed_line[1]  # status code
 
-                if (code in dict_sc.keys()):
+                while (code in dict_sc.keys()):
                     dict_sc[code] += 1
 
             if (counter == 10):
