@@ -4,15 +4,17 @@ import sys
 
 
 def print_msg(dict_sc, total_file_size):
-     """
-     Display the status codes and overall file size.
-     Parameters:
-     dict_sc (dict): A dictionary containing status codes.
-     total_file_size (int or float): The total size of the file.
+    """
+    Print the total file size and the count of each status code.
 
-     Returns:
-     None
-     """
+    Args:
+        status_codes_dict (dict): Dictionary containing
+        the count of each status code.
+        total_file_size (int): Total size of the files.
+
+    Returns:
+        None
+    """
 
     print("File size: {}".format(total_file_size))
     for key, val in sorted(dict_sc.items()):
