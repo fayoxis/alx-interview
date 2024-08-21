@@ -21,7 +21,7 @@ def validUTF8(data):
                 mask_byte = mask_byte >> 1
 
             # Skip ASCII characters
-            while num_bytes == 0:
+            if num_bytes == 0:
                 i += 1
                 continue
 
