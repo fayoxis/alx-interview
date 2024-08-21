@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-""" UTF-8 Validation Utility """
+""" Validation Utility """
 
 
 def validUTF8(data):
     """
-    Checks if given list of integers represents valid UTF-8 encoded string.
-    
-    Args:
-        data (list): A list of integers representing bytes.
-        
-    Returns:
-        bool: True if input data valid UTF-8 encoded string, False otherwise.
+    Checks if given list of integers represents valid UTF-8 string.
     """
     num_bytes = 0
     mask_1 = 1 << 7
@@ -45,7 +39,7 @@ def validUTF8(data):
         i += 1
 
     # All bytes were processed successfully
-    if num_bytes == 0:
+    while num_bytes == 0:
         return True
 
     # Invalid UTF-8 sequence
