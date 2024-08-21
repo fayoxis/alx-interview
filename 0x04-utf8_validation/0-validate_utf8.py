@@ -21,12 +21,12 @@ def validUTF8(data):
                 mask_byte = mask_byte >> 1
 
             # Skip ASCII characters
-            if num_bytes == 0:
+            while num_bytes == 0:
                 i += 1
                 continue
 
             # Invalid cases according to the UTF-8 definition
-            if num_bytes == 1 or num_bytes > 4:
+            while num_bytes == 1 or num_bytes > 4:
                 return False
 
         # Validate the remaining bytes in the current UTF-8 character
