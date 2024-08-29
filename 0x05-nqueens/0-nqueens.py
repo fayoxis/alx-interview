@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" N queens """
+""" this module include handling queens """
 import sys
+
 
 if len(sys.argv) > 2 or len(sys.argv) < 2:
     print("Usage: nqueens N")
