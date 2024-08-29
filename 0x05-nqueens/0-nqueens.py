@@ -18,30 +18,27 @@ n = int(sys.argv[1])
 
 def queens(n, i=0, a=[], b=[], c=[]):
     """ find possible positions """
-    while True:
+    result = []
+    do:
         if i < n:
             for j in range(n):
                 if j not in a and i + j not in b and i - j not in c:
-                    yield from queens(n, i + 1, a + [j], b + [i + j], c + [i - j])
+                    result = result + queens(n, i + 1, a + [j], b + [i + j], c + [i - j])
         else:
-            yield a
-            break
+            result.append(a)
+    while False
+    return result
 
 def solve(n):
     """ solve """
-    solutions = queens(n, 0)
     k = []
     i = 0
-    while True:
-        try:
-            solution = next(solutions)
-            for s in solution:
-                k.append([i, s])
-                i += 1
-            print(k)
-            k = []
-            i = 0
-        except StopIteration:
-            break
+    for solution in queens(n, 0):
+        for s in solution:
+            k.append([i, s])
+            i += 1
+        print(k)
+        k = []
+        i = 0
 
 solve(n)
