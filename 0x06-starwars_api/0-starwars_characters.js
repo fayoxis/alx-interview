@@ -17,4 +17,4 @@ const exactOrder = (actors, x) => {
     });
     i++;
   }
-}
+};
