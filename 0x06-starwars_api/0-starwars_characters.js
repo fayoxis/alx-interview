@@ -8,7 +8,7 @@ request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (err,
   exactOrder(actors, 0);
 });
 const exactOrder = (actors, x) => {
-  while (x === actors.length) return;
+  if (x === actors.length) return;
   request(actors[x], function (err, res, body) {
     if (err) throw err;
     console.log(JSON.parse(body).name);
