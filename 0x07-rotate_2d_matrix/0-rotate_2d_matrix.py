@@ -3,10 +3,11 @@
 Rotate a 2D Matrix by 90 Degrees Clockwise
 """
 
+
 def rotate_2d_matrix(matrix):
-    """Perform a 90-degree clockwise rotation on a two-dimensional matrix
-    Args:
-        matrix (list[list]): A two-dimensional list representing the matrix
+    """Perform a 90-degree clockwise rotation on a
+    two-dimensional matrixA two-dimensional list
+    representing the matrix
     """
     n = len(matrix)
     i = 0
