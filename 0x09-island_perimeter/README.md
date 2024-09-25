@@ -1,4 +1,4 @@
-#🧮 0x09-island_perimeter
+# 🧮 0x09-island_perimeter
 In this challenge, we need to find the perimeter of an island represented
 as a grid of 1s (land) and 0s (water). The perimeter is the total length
  of the edges that border water.
