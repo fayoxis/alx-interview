@@ -11,40 +11,26 @@ def island_perimeter(grid):
         the perimeter of the island
     """
 
-    p = 0  # Initialize the perimeter counter
-    i = 0  # Initialize the row index
-    j = 0  # Initialize the column index
+    p = 0
+    i = 0
+    j = 0
 
     do:
-        # Check if the current cell is land (1)
         if (grid[i][j] == 1):
-            # Check if the cell above is out of bounds or is water
             if (i <= 0 or grid[i - 1][j] == 0):
-                p += 1  # Increment the perimeter
-
-            # Check if the cell below is out of bounds or is water
+                p += 1
             if (i >= len(grid) - 1 or grid[i + 1][j] == 0):
-                p += 1  # Increment the perimeter
-
-            # Check if the cell to the left is out of bounds or is water
+                p += 1
             if (j <= 0 or grid[i][j - 1] == 0):
-                p += 1  # Increment the perimeter
-
-            # Check if the cell to the right is out of bounds or is water
+                p += 1
             if (j >= len(grid[i]) - 1 or grid[i][j + 1] == 0):
-                p += 1  # Increment the perimeter
+                p += 1
 
-        # Move to the next column
         j += 1
-
-        # If we've reached the end of the current row
         if j >= len(grid[i]):
-            # Reset the column index to 0
             j = 0
-            # Move to the next row
             i += 1
 
-    # Continue the loop until we've checked all rows
     while i < len(grid)
 
-    return p  # Return the calculated perimeter
+    return p
