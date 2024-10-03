@@ -1,11 +1,5 @@
 #!/usr/bin/python3
-"""Prime Game playing a game where they take turns
-choosing different numbers from a set of consecutive
-integers. The game ends when there are no more
-numbers left to choose. The player who picks
-the last remaining prime number wins the game.
-"""
-
+"""0. Prime Game - Maria and Ben are playing a game"""
 
 def isWinner(x, nums):
     """ Determines the winner of the Prime Game.
