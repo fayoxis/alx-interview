@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""0. Prime Game - Maria and Ben are playing a game"""
+"""Prime Game playing a game where they take turns
+choosing different numbers from a set of consecutive
+integers. The game ends when there are no more
+numbers left to choose. The player who picks
+the last remaining prime number wins the game."""
 
 
 def isWinner(x, nums):
