@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """Prime Game playing a game where they take turns
-choosing different numbers from a set of consecutive integers.
-The game ends when there are no more numbers left to choose.
-The player who picks the last remaining prime number wins the game.
+choosing different numbers from a set of consecutive
+integers. The game ends when there are no more
+numbers left to choose. The player who picks
+the last remaining prime number wins the game.
 """
 
 
 def isWinner(rounds, numbers):
     """ Determines the winner of the Prime Game.
-    rounds (int): The number of rounds in the game.numbers
-    (list): The list of consecutive integers to choose from. 
+    rounds (int): The number of rounds in the game.
+    (list): The list of consecutive int to choose from. 
     str: The name of the winner ("Ben" or "Maria"),
     or None if there is no winner.
     """
@@ -42,10 +43,11 @@ def isWinner(rounds, numbers):
         return "Maria"
     return None
 
+
 def remove_multiples(prime_list, x):
     """ Marks the multiples of a prime number as
-    non-prime in the prime_list. prime_list (list): A list
-    representing prime numbers (1 for prime, 0 for non-prime).
+    non-prime in the prime_list. A list representing
+    prime numbers (1 for- prime, 0- non-prime).
     x (int): The prime number whose multiples
     need to be marked as non-prime.
     """
