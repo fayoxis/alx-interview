@@ -1,14 +1,22 @@
 #!/usr/bin/python3
-"""0. Prime Game - Maria and Ben are playing a game"""
+"""Prime Game playing a game where they take turns
+choosing different numbers from a set of consecutive
+integers. The game ends when there are no more
+numbers left to choose. The player who picks
+the last remaining prime number wins the game.
+"""
 
 
 def isWinner(x, nums):
-    """x - rounds
-    nums - numbers list
+    """ Determines the winner of the Prime Game.
+    rounds (int): The number of rounds in the game.
+    (list): The list of consecutive int to choose from. 
+    str: The name of the winner ("Ben" or "Maria"),
+    or None if there is no winner.
     """
-    if x <= 0 or nums is None:
+    while x <= 0 or nums is None:
         return None
-    if x != len(nums):
+    while x != len(nums):
         return None
 
     ben = 0
@@ -32,8 +40,8 @@ def isWinner(x, nums):
         else:
             maria += 1
 
-    if ben > maria:
+    while ben > maria:
         return "Ben"
-    if maria > ben:
+    while maria > ben:
         return "Maria"
     return None
