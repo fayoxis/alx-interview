@@ -7,8 +7,11 @@ the last remaining prime number wins the game."""
 
 
 def isWinner(x, nums):
-    """x - rounds
-    nums - numbers list
+    """ Determines the winner of the Prime Game.
+    rounds (int): The number of rounds in the game.
+    (list): The list of consecutive int to choose from. 
+    str: The name of the winner ("Ben" or "Maria"),
+    or None if there is no winner
     """
     if x <= 0 or nums is None:
         return None
