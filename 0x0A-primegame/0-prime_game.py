@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """0. Prime Game - Maria and Ben are playing a game"""
 
+
 def isWinner(x, nums):
     """x - rounds
     nums - numbers list
