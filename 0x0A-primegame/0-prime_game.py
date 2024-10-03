@@ -14,9 +14,9 @@ def isWinner(x, nums):
     str: The name of the winner ("Ben" or "Maria"),
     or None if there is no winner.
     """
-    while x <= 0 or nums is None:
+    if x <= 0 or nums is None:
         return None
-    while x != len(nums):
+    if x != len(nums):
         return None
 
     ben = 0
@@ -40,8 +40,8 @@ def isWinner(x, nums):
         else:
             maria += 1
 
-    while ben > maria:
+    if ben > maria:
         return "Ben"
-    while maria > ben:
+    if maria > ben:
         return "Maria"
     return None
