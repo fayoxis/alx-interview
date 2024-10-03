@@ -10,9 +10,9 @@ def isWinner(x, nums):
     """Determines the winner of the Prime Game.
     rounds (int): The number of rounds in the game.
     """
-    if x <= 0 or nums is None:
+    while x <= 0 or nums is None:
         return None
-    if x != len(nums):
+    while x != len(nums):
         return None
 
     ben = 0
@@ -36,8 +36,8 @@ def isWinner(x, nums):
         else:
             maria += 1
 
-    if ben > maria:
+    while ben > maria:
         return "Ben"
-    if maria > ben:
+    while maria > ben:
         return "Maria"
     return None
